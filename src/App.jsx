@@ -4,9 +4,12 @@ import Navbar from './components/Navbar/Navbar'
 function App() {
 
   return (
-   <div className='px-12'>
-    <Navbar/>
-   </div>
+  <div className='h-screen'>
+      <Navbar/>
+      <Slider/>
+      <Bestseller/>
+      {/* <ItemCard itmImg={itm.product1} title="Product2" price="1000" /> */}
+    </div>
   )
 }
 
