@@ -6,8 +6,12 @@ export default function AppRoutes(){
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<App/>}></Route>
-                <Route path="/navbar" element={<Navbar/>}></Route>
+                <Route path="/" element={<App/>} ></Route>
+                <Route path="/shop" element={<Shop/>}></Route>
+                <Route path="/productfinder" element={<ProductFinder/>}></Route>
+                <Route path="/bestseller" element={<Bestseller/>}></Route>
+                <Route path="/support" element={<Support/>}></Route>
+                <Route path="/uploadItem/uploadItemForm" element={<ItemUploaderForm/>}></Route>
             </Routes>
         </Router>
     )
