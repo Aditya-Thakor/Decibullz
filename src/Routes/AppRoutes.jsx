@@ -16,6 +16,11 @@ import Checkout from "/src/pages/CheckOut/CheckOut";
 import Login from "/src/pages/Login/Login";
 import Signup from "/src/pages/SignUp/Signup";
 import AdminLogin from "/src/pages/Login/AdminLogin";
+import PageTemp from "/src/pages/Shop/PageTemp";
+import BestSellerMain from "/src/pages/Bestseller/BestSellerMain";
+import Hunting from "/src/pages/ProductFinder/Hunting";
+import Industrial from "/src/pages/ProductFinder/Industrial";
+import Events from "/src/pages/ProductFinder/Events";
 
 export default function AppRoutes(){
     return(
@@ -26,8 +31,12 @@ export default function AppRoutes(){
                 <Route path="/login" element={<Login/>}></Route>
                 <Route path="/signup" element={<Signup/>} ></Route>
                 <Route path="/shop" element={<Shop/>}></Route>
-                <Route path="/productfinder" element={<ProductFinder/>}></Route>
-                <Route path="/bestseller" element={<Bestseller/>}></Route>
+                <Route path="/productfinder" element={<ProductFinder/>}>
+                </Route>
+                <Route path="/productfinder/hunting" element={<Hunting/>}></Route>
+                <Route path="/productfinder/industrial" element={<Industrial/>}></Route>
+                <Route path="/productfinder/events" element={<Events/>}></Route>
+                <Route path="/bestseller" element={<BestSellerMain/>}></Route>
                 <Route path="/support" element={<Support/>}></Route>
                 <Route path="/uploadItem/uploadItemForm" element={<ItemUploaderForm/>}></Route>
                 <Route path="/admin" element={<Admin/>}>
@@ -39,6 +48,7 @@ export default function AppRoutes(){
                 <Route path="/test" element={<Test2/>}></Route>
                 <Route path="/nav" element={<Navbar/>}></Route>
                 <Route path='/checkout' element={<Checkout/>}></Route>
+                <Route path="/temp" element={<PageTemp/>}></Route>
             </Routes>
         </Router>
     )

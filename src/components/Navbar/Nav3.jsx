@@ -2,17 +2,11 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "/src/assets/images/index.js";
 import { useContext, useEffect, useState } from "react";
 import CartContext from "/src/Contexts/CartContext";
-// import { CartContext } from "/src/Contexts/CartContext";
-export default function Navbar({bg, }) {
+export default function Nav3() {
    const navigate = useNavigate();
 
-   const {cartdata}=useContext(CartContext);
-  // console.log('cart-',cart[0]);
-  // console.log('cart', cart[0]? cart[0].qty : "null");
-  
-   const ln =cartdata.length ;
-  //  const ln =1;
-  // console.log(ln); 
+   const {cartdata}=useContext(CartContext); 
+   const ln =cartdata.length ; 
   
   const [scroll, setScroll] = useState(false)
 
@@ -35,18 +29,17 @@ export default function Navbar({bg, }) {
   return (
     <div
       className={` h-28 z-50 fixed top-0 w-full text-slate-950 px-10 flex items-center justify-between 
-        ${scroll && bg? 
+        ${scroll ?
           " bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transition ease-in-out " 
-          : " bg-transparent text-white "
-        } 
-        ${bg ? "text-black" : ""}
+          : " bg-transparent text-black "
+        }  
       `}
       
       // style={{ background: "#ffffffd1" }}
     >
       <div className="h-20 w-60">
         <img 
-          className={` h-full w-full invert ${scroll? "invert" : " invert-0"} `}
+          className={` h-full w-full invert  `}
           src={logo.logo} 
           alt="logo" 
           onClick={()=>navigate('/')}
@@ -74,20 +67,7 @@ export default function Navbar({bg, }) {
         <NavLink to='/support' className="font-bold  text-md hover:text-orange-500">
           SUPPORT
         </NavLink>
-        {/* <NavLink
-          to="/uploadItem/uploadItemForm"
-          className="font-semibold text-slate-700 text-md"
-          target="_blank"
-        >
-          UploadItem
-        </NavLink> */}
-        {/* <NavLink
-          to="/admin/admindashboard"
-          className="font-semibold text-slate-700 text-md"
-          target="_blank"
-        >
-          Admin
-        </NavLink> */}
+         
       </div>
       <div className="flex gap-4  text-xl ">
         {/* search */}

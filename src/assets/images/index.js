@@ -36,8 +36,17 @@ import articleImg1 from './imgs/articals/105-0A0A3940.jpg';
 import articleImg2 from './imgs/articals/Decibullz-Beneski-by-Justin-Balog-21.jpg';
 import articleImg3 from './imgs/articals//Decjibullz_Wellness_Earplug_Image.png'; 
 import visa from './logo/paymentCards/Visa_Logo.wine.png';
-import mastercard from './logo/paymentCards/Mastercard-Logo.wine.png'
-import amex from './logo/paymentCards/American_Express-Logo.wine.png'
+import mastercard from './logo/paymentCards/Mastercard-Logo.wine.png';
+import amex from './logo/paymentCards/American_Express-Logo.wine.png';
+import category1 from './icons/huntting.png';
+import category2 from './icons/diy.png';
+import category3 from './icons/music.png';
+import category4 from './icons/sleep.png';
+import category5 from './icons/sport.png';
+import category6 from './icons/radio.png';
+import category7 from './icons/other.png'; 
+
+
 export default {
   slide1,
   slide2,
@@ -78,5 +87,12 @@ export default {
   articleImg3,
   visa,
   mastercard,
-  amex
+  amex,
+  category1,
+  category2,
+  category3,
+  category4,
+  category5,
+  category6,
+  category7,
 };

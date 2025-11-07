@@ -9,6 +9,7 @@ import Test2 from "./components/Slider/Test2";
 import CartProvider from "./Contexts/CartProvider";
 import Test3 from "./components/Slider/Test3";
 import Footer from "./components/Footer/Footer";
+import Shop from "./pages/Shop/Shop";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById("root")).render(
     <CartProvider>
         <AppRoutes />
     </CartProvider> 
+      
   </StrictMode>
 );
