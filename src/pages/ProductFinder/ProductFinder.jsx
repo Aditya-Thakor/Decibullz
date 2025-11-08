@@ -17,64 +17,89 @@ export default function ProductFinder() {
             What do you need Decibullz for?
           </h1>
           <div className="grid grid-cols-4 gap-10 text-center">
-            <div className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer">
-              <div 
-                    className="flex items-center justify-center relative"
-                    onClick={()=>{
+            <div 
+              className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer"
+              onClick={()=>{
                         navigate('/productfinder/hunting')
                     }}
-                >
+            >
+              <div 
+                    className="flex items-center justify-center relative"    
+              >
                 <img src={category.category1} alt="c1" className="h-20 w-20" />
               </div>
               <span className="font-semibold text-lg">Hunting, Shooting</span>
             </div>
 
-            <div className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer">
-              <div 
-                className="flex items-center justify-center relative"
-                onClick={()=>{
+            <div 
+              className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer"
+              onClick={()=>{
                         navigate('/productfinder/industrial')
                     }}
+            >
+              <div 
+                className="flex items-center justify-center relative" 
               >
                 <img src={category.category2} alt="c1" className="h-20 w-20" />
               </div>
               <span className="font-semibold text-lg">DIY, Industrial, Manufacturing</span>
             </div>
 
-            <div className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer">
-              <div 
-                    className="flex items-center justify-center relative"
-                    onClick={()=>{
+            <div 
+              className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer"
+              onClick={()=>{
                         navigate('/productfinder/events')
                     }}
-                >
+            >
+              <div 
+                    className="flex items-center justify-center relative" 
+              >
                 <img src={category.category3} alt="c1" className="h-20 w-20" />
               </div>
               <span className="font-semibold text-lg ">Attending Events, Music, Concerts</span>
             </div>
 
-            <div className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer ">
-              <div className="flex items-center justify-center relative">
+            <div 
+              className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer "
+              onClick={()=>{
+                navigate('/productfinder/sleep')
+              }}
+            >
+              <div className="flex items-center justify-center relative" >
                 <img src={category.category4} alt="c1" className="h-20 w-20" />
               </div>
               <span className="font-semibold text-lg">Sleep, Sensory Relief, Focus</span>
             </div>
 
-            <div className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer ">
-              <div className="flex items-center justify-center relative">
+            <div 
+              className="h-50 w-50 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer "
+              onClick={()=>{
+                navigate('/productfinder/sports')
+              }}
+            >
+              <div className="flex items-center justify-center relative" >
                 <img src={category.category5} alt="c1" className="h-20 w-20" />
               </div>
               <span className="font-semibold text-lg">MotorSports</span>
             </div>
 
-            <div className="h-50 w-50 p-5 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer ">
+            <div 
+              className="h-50 w-50 p-5 flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer "
+              onClick={()=>{
+                navigate('/productfinder/radio')
+              }}
+            >
               <div className="flex items-center justify-center relative">
                 <img src={category.category6} alt="c1" className="h-20 w-20" />
               </div>
               <span className="font-semibold text-lg">Radio, Communications</span>
             </div>
 
-            <div className="h-50 w-50  flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer ">
+            <div className="h-50 w-50  flex flex-col gap-5 justify-center items-center  border border-black rounded-xl hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 hover:transition hover:ease-in-out cursor-pointer "
+              onClick={()=>{
+                navigate('/shop')
+              }}
+            >
               <div className="flex items-center justify-center relative">
                 <img src={category.category7} alt="c1" className="h-20 w-20" />
               </div>

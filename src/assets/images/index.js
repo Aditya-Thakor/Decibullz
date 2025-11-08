@@ -45,6 +45,11 @@ import category4 from './icons/sleep.png';
 import category5 from './icons/sport.png';
 import category6 from './icons/radio.png';
 import category7 from './icons/other.png'; 
+import trackOrder from './icons/track.svg';
+import returnOrder from './icons/returnOrder.svg';
+import cancelOrder from './icons/cancleOrd.svg';
+import reportIssue from './icons/reportIssue.svg';
+
 
 
 export default {
@@ -95,4 +100,8 @@ export default {
   category5,
   category6,
   category7,
+  trackOrder,
+  reportIssue,
+  cancelOrder,
+  returnOrder
 };

@@ -21,6 +21,9 @@ import BestSellerMain from "/src/pages/Bestseller/BestSellerMain";
 import Hunting from "/src/pages/ProductFinder/Hunting";
 import Industrial from "/src/pages/ProductFinder/Industrial";
 import Events from "/src/pages/ProductFinder/Events";
+import Radio from "/src/pages/ProductFinder/Radio";
+import Sports from "/src/pages/ProductFinder/Sports";
+import Sleep from "/src/pages/ProductFinder/Sleep";
 
 export default function AppRoutes(){
     return(
@@ -36,6 +39,9 @@ export default function AppRoutes(){
                 <Route path="/productfinder/hunting" element={<Hunting/>}></Route>
                 <Route path="/productfinder/industrial" element={<Industrial/>}></Route>
                 <Route path="/productfinder/events" element={<Events/>}></Route>
+                <Route path="/productfinder/radio" element={<Radio/>}></Route>
+                <Route path="/productfinder/sports" element={<Sports/>}></Route>
+                <Route path="/productfinder/sleep" element={<Sleep/>}></Route>
                 <Route path="/bestseller" element={<BestSellerMain/>}></Route>
                 <Route path="/support" element={<Support/>}></Route>
                 <Route path="/uploadItem/uploadItemForm" element={<ItemUploaderForm/>}></Route>
