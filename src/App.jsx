@@ -17,13 +17,13 @@ import Review from "./pages/ReviewSection/Review";
 
 function App() {
   return (
-    <div className="h-screen ">
+    <div className="h-screen bg-gray-400">
       
       
       
-      <Navbar bg={true} />
+      <Navbar  />
       {/* <Slider /> */}
-      <SliderMain/>
+      {/* <SliderMain/>
       <BestSellerSection />
       <Review />
       <Partners />
@@ -31,7 +31,7 @@ function App() {
       <FeatureSection />
       <AdsSection />
       <ArticlesSection />
-      <Footer/>
+      <Footer/> */}
       
       
       
