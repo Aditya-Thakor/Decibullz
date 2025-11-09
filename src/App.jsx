@@ -17,7 +17,7 @@ import Review from "./pages/ReviewSection/Review";
 
 function App() {
   return (
-    <div className="h-screen bg-gray-400">
+    <div className="h-screen bg-gray-500">
       
       
       

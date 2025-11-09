@@ -46,12 +46,12 @@ export default function Navbar({bg, }) {
       
       // style={{ background: "#ffffffd1" }}
     >
-      <div className="flex items-center gap-5 sm:hidden ">
+      <div className="flex items-center gap-5 lg:hidden ">
         <Menu 
           className="size-5"
           onClick={()=>{setIsMenuOn(true)}}
         />
-        <Search className="size-5"/>
+        <Search className="size-5 sm:hidden"/>
       </div>
       <div className="h-20 w-40 sm:h-20 sm:w-60">
         <img 
@@ -61,7 +61,7 @@ export default function Navbar({bg, }) {
           onClick={()=>navigate('/')}
         />
       </div>
-      <div className="hidden sm:flex gap-6">
+      <div className="hidden lg:flex gap-6">
         <NavLink
           className="font-bold  text-md hover:text-orange-500"
           to="/shop"
@@ -123,7 +123,7 @@ export default function Navbar({bg, }) {
             </i>
         </Link>
       </div>
-      <div className={` h-screen w-full bg-transparent  sm:hidden absolute left-0 top-0 p-2  transition-transform duration-500 ease-in-out ${isMenuOn? "  translate-x-0   " : " -translate-x-full "}`}>
+      <div className={` h-screen w-full sm:w-1/2 bg-transparent  lg:hidden absolute left-0 top-0 p-2  transition-transform duration-500 ease-in-out ${isMenuOn? "  translate-x-0   " : " -translate-x-full "}`}>
              <div className={` h-full w-full flex flex-col gap-10 p-7 bg-white  `}>
               <div className={`transition-opacity duration-1000  ease-in-out `}>
                 <X 
