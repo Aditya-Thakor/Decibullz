@@ -7,6 +7,7 @@ export default function VideoSection(){
                 preload='auto'
                 autoPlay
                 loop
+                muted
                 className='h-full w-full object-fill'
             ></video>
         </div>
