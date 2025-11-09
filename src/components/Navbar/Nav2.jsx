@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Nav2(){
     const navlink=useNavigate();
     return(
-        <div className="h-[13%] flex justify-around items-center gap-96 bg-white border-b border-gray-300">
+        <div className="h-[13%] flex justify-between px-10 items-center gap-3  bg-white border-b border-gray-300">
             <img 
                 className='h-20 p-3 invert'
                 src={lg.logo} alt="main-log" 

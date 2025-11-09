@@ -4,6 +4,8 @@ import ArticlesSection from "./components/Articles/ArticlesSection";
 import FeatureSection from "./components/FeatureSection/FeatureSection";
 import Footer from "./components/Footer/Footer";
 import ItemCard from "./components/ItemCard/Itemcard";
+import Nav2 from "./components/Navbar/Nav2";
+import Nav3 from "./components/Navbar/Nav3";
 import Navbar from "./components/Navbar/Navbar";
 import Slider from "./components/Slider/Slider";
 import SliderMain from "./components/Slider/SliderMain";
@@ -21,10 +23,10 @@ function App() {
       
       
       
-      <Navbar  />
+      {/* <Navbar  /> */} 
       {/* <Slider /> */}
-      {/* <SliderMain/>
-      <BestSellerSection />
+      <SliderMain/>
+      {/* <BestSellerSection />
       <Review />
       <Partners />
       <VideoSection />
