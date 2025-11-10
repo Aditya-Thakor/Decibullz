@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import ItemCard from "/src/components/ItemCard/Itemcard";
 import { useEffect, useState } from "react";
+import { ChevronRight } from "lucide-react";
 
 export default function BestSellerSection() {
 
@@ -20,16 +21,16 @@ export default function BestSellerSection() {
 
   return (
     <div className="h-screen mt-28 px-10">
-      <div className="flex items-center justify-between h-20">
-        <span className="text-4xl font-semibold">BEST SELLERS</span>
+      <div className="flex flex-col lg:flex-row lg:justify-between items-start lg:items-center gap-2 h-20">
+        <span className=" text-2xl sm:text-4xl font-semibold">BEST SELLERS</span>
         <span 
-            className="text-gray-600 cursor-pointer"
+            className="text-gray-600 cursor-pointer flex items-center  gap-2"
             onClick={()=>navigate('/bestseller')}
-        >View all</span>
+        >View all<ChevronRight className="bg-gray-300 size-5 rounded-full p-1 font-bold"/></span>
       </div>
 
       <div className="h-full">
-        <div className="grid grid-cols-4 gap-4 h-auto">
+        <div className="grid grid-cols-2 gap-2 sm:gap-6 lg:grid-cols-4 lg:gap-4 h-auto">
           {bestSeller.map((itm, ind) => (
             <ItemCard
               key={ind}
