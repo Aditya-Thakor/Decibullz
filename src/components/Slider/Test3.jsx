@@ -79,7 +79,7 @@ export const SpringMouseFollow = () => {
         opacitySpring.set(0);
         scaleSpring.set(0);
       }}
-      className=" bg-background  h-screen relative "
+      className=" bg-background  h-screen relative hidden md:block "
     >
       <motion.div
         style={{
@@ -122,26 +122,26 @@ export const SpringMouseFollow = () => {
             </div>
             <div className="bg-transparent absolute h-full w-1/2 left-10 flex items-center ">  
               <div className="h-1/2 w-2/3 flex flex-col gap-4 ">
-                <div className="h-14">
+                <div className="md:h-7 lg:h-14">
                   <img 
                     src={slides.gearup}
                     alt="gearup-ad" 
                     className="h-full"
                   />
                 </div>
-                <div className="flex flex-col font-bold text-6xl text-gray-900 cursor-default">
+                <div className="flex flex-col font-bold md:text-3xl lg:text-6xl  text-gray-900 cursor-default">
                   <span className="">15% OFF</span>
                   <span>SITEWIDE</span>
                 </div>
-                <div>
-                  <p className="flex flex-col">
-                    <strong>{sld.tagline}</strong>
-                    <span>{sld.para} Use code <strong> GEARUP15 </strong> at check out.</span>
+                <div className="w-full">
+                  <p className="flex flex-col md:w-full">
+                    <strong className="md:text-sm lg:text-lg"> {sld.tagline}</strong>
+                    <span className="md:text-xs lg:text-sm">{sld.para} Use code <strong> GEARUP15 </strong> at check out.</span>
                   </p>
                 </div>
                 <div>
                   <button 
-                    className={`${sld.btnColor} px-5 py-5 w-3/4 text-white font-bold cursor-pointer `}
+                    className={`${sld.btnColor} md:px-3 md:py-4 lg:px-5 lg:py-5 lg:w-3/4 text-white font-bold cursor-pointer `}
                     onMouseEnter={()=>{
                       setIsVisible(false)
                     }}
@@ -163,8 +163,9 @@ export const SpringMouseFollow = () => {
 export default function Test3() {
   // console.log("Slides:", slides);
   return (
-    <div className="slide-container h-screen w-full">
-      <SpringMouseFollow />
+    <div className="slide-container h-screen w-full ">
+      
+      <SpringMouseFollow  />
     </div>
   );
 }

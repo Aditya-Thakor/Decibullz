@@ -3,6 +3,7 @@ import slide2 from "./imgs/slider/PERCUSSIVE_-_SLIDE_2.png";
 import slide3 from "./imgs/slider/HIFI_-_PRO_-_SLIDE_3.png";
 import slide4 from "./imgs/slider/COMMS_-_SLIDE_4.png";
 import gearup from "./imgs/slider/GEAR_UP_-_H.png";
+import soundon from "./imgs/slider/dz_SOTS_Logo-no-shadow.png";
 import product1 from "./imgs/products/product1.png";
 import product2 from "./imgs/products/product2.png";
 import product3 from "./imgs/products/product3.png";
@@ -58,6 +59,7 @@ export default {
   slide3,
   slide4,
   gearup,
+  soundon,
   product1,
   product2,
   product3,
