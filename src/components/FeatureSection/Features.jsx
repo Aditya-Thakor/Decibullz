@@ -24,17 +24,17 @@ export default function Features(){
         },
     ]
     return(
-        <div className='flex justify-center items-center gap-32'>
+        <div className='flex justify-center items-center gap-5 sm:gap-32'>
             {
                 features.map((itm,ind)=>(
                     <div 
                         key={ind}
-                        className='flex flex-col items-center justify-center gap-5'
+                        className='flex flex-col items-center justify-center text-center gap-5'
                     >
                         <img 
                             src={itm.icon} 
                             alt="featureImage" 
-                            className='h-24'
+                            className='h-10 sm:h-24'
                         />
                         <span>{itm.feature}</span>
                     </div>

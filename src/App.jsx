@@ -27,11 +27,11 @@ function App() {
       {/* <Slider /> */}
       {/* <SliderMain/> */}
       {/* <BestSellerSection /> */}
-      <Review />
+      {/* <Review /> */}
       {/* <Partners /> */}
-      {/* <VideoSection />
+      {/* <VideoSection /> */}
       <FeatureSection />
-      <AdsSection />
+      {/* <AdsSection />
       <ArticlesSection />
       <Footer/> */}
       
