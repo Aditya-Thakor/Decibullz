@@ -23,15 +23,15 @@ function App() {
       
       
       
-      {/* <Navbar  /> */} 
+      <Navbar  /> 
       {/* <Slider /> */}
-      {/* <SliderMain/> */}
-      {/* <BestSellerSection /> */}
-      {/* <Review /> */}
-      {/* <Partners /> */}
-      {/* <VideoSection /> */}
-      {/* <FeatureSection /> */}
-      <AdsSection />
+      <SliderMain/>
+      <BestSellerSection />
+      <Review />
+      <Partners />
+      <VideoSection />
+      <FeatureSection />
+      {/* <AdsSection /> */}
       {/* <ArticlesSection /> */}
       <Footer/>
       

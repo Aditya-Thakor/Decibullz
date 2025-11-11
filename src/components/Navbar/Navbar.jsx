@@ -36,7 +36,7 @@ export default function Navbar({bg, }) {
 //add && bg in scroll ternary
   return (
     <div
-      className={` h-28 z-50 fixed top-0 w-full text-slate-950 px-5 sm:px-10 flex items-center justify-between 
+      className={` h-28 z-50 fixed top-0 w-screen text-slate-950 px-5 sm:px-10 flex items-center justify-between 
         ${scroll  ?  
           " bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transition ease-in-out " 
           : " bg-transparent text-white "

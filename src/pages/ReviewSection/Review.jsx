@@ -15,8 +15,8 @@ export default function Review(){
         )
     },[])
     return(
-    <div className="h-screen ">
-        <div className="h-1/5  flex items-center justify-center text-xl sm:text-4xl font-bold text-[#1a1a1a]">
+    <div className="h-auto xl:h-screen ">
+        <div className="h-1/5 mb-5 md:mt-5 xl:mb-0 xl:mt-0 flex items-center justify-center text-xl sm:text-4xl font-bold text-[#1a1a1a]">
             <h2>STEP UP YOUR EARPLUG GAME</h2>
         </div>
         <div className="flex justify-center items-center   ">
