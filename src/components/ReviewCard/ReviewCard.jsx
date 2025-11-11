@@ -3,7 +3,7 @@
 export default function ReviewCard({video,pimg,pname,price}){
     return(
         <div 
-            className="h-full w-72 relative object-contain"
+            className="h-full w-40 sm:w-72 relative object-contain"
         >
           <div
             className='h-full w-full '
@@ -19,20 +19,20 @@ export default function ReviewCard({video,pimg,pname,price}){
                     >
                 </video>
             </div>
-            <div className='h-24 w-full flex items-center gap-3 px-3 bg-white/30 backdrop-blur-md absolute bottom-0'>
+            <div className=' sm:h-24 w-full flex items-center gap-3 px-3 bg-white/30 backdrop-blur-md absolute bottom-0'>
                 <div className='w-1/4'>
                     <img 
                         src={`http://localhost:5000/productImages/${pimg}`} alt="product" 
-                        className=''
+                        className='h-full w-full object-fill'
                     />
                 </div>
                 <div
-                    className='w-3/4 flex flex-col'
+                    className='h-auto w-3/4 flex flex-col'
                 >
-                    <span className='text-wrap text-xs'>
+                    <span className='w-full text-wrap text-xs'>
                         {pname}
                     </span>
-                    <span className='font-semibold'>$ {price}</span>
+                    <span className='font-semibold text-xs sm:text-sm'>$ {price}</span>
                 </div>
             </div>
           </div>
