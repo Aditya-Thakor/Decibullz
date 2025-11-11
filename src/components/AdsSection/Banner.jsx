@@ -3,7 +3,7 @@ export default function Banner({bg,title,text, textColor , order,btnText,pfp, to
     
     return(
         <div 
-            className='h-full flex justify-between items-center gap-20 px-10'
+            className='h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center scale-110 lg:gap-20 px-5 lg:px-10'
             style={{
                 backgroundImage:`url(${bg})`, 
                 backgroundPosition:"center",
@@ -13,11 +13,11 @@ export default function Banner({bg,title,text, textColor , order,btnText,pfp, to
            <div 
                 className={ ` flex  w-1/2   ${textColor} flex-col justify-center items-start gap-8  ${order} `}
             >
-                <h1 className='text-5xl font-bold'>{title}</h1> 
-                <span className=' font-normal  ' >{text}</span>
+                <h1 className='text-xl lg:text-5xl font-bold'>{title}</h1> 
+                <span className='w-full font-normal  ' >{text}</span>
                 <OrangeBtn text={btnText} />
            </div>
-           <div className={`' relative '`}>
+           <div className={`'h-40 relative '`}>
             <img 
                 src={pfp} 
                 alt="pfp" 

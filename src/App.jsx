@@ -30,10 +30,10 @@ function App() {
       {/* <Review /> */}
       {/* <Partners /> */}
       {/* <VideoSection /> */}
-      <FeatureSection />
-      {/* <AdsSection />
-      <ArticlesSection />
-      <Footer/> */}
+      {/* <FeatureSection /> */}
+      <AdsSection />
+      {/* <ArticlesSection /> */}
+      <Footer/>
       
       
       
