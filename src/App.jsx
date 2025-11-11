@@ -26,9 +26,9 @@ function App() {
       {/* <Navbar  /> */} 
       {/* <Slider /> */}
       {/* <SliderMain/> */}
-      {/* <BestSellerSection /> */}
+      <BestSellerSection />
       {/* <Review /> */}
-      <Partners />
+      {/* <Partners /> */}
       {/* <VideoSection />
       <FeatureSection />
       <AdsSection />

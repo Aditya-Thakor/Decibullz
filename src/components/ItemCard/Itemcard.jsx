@@ -10,16 +10,16 @@ export default function ItemCard({itmImg , title, price,offer, btnWorking,produc
   // const [carted,setCarted] = useState([]);
   //const [cart,setCart]=useState(0);
   //const {cart,addToCart} = React.useContext(require("../../Contexts/CartContext").de);
-  const {cartdata,addToCart} = useContext(CartContext)
-  useEffect(()=>{
-    fetch('http://localhost:5000/productdata')
-    .then((res)=>res.json())
-    .then((data)=>{
-      setProducts(data)
-    })
-    .catch((error)=>console.log('error at cartting',error)
-    )
-  },{products})
+  const {addToCart} = useContext(CartContext)
+  // useEffect(()=>{
+  //   fetch('http://localhost:5000/productdata')
+  //   .then((res)=>res.json())
+  //   .then((data)=>{
+  //     setProducts(data)
+  //   })
+  //   .catch((error)=>console.log('error at cartting',error)
+  //   )
+  // },{products})
 
   // console.log(cart? console.log(cart): 'empty cart' );
   
