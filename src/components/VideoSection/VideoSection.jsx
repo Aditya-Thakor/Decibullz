@@ -1,7 +1,7 @@
 import mv from '/src/assets/videos/video'
 export default function VideoSection(){
     return(
-        <div className="h-screen w-full">
+        <div className="lg:h-screen w-full">
             <video 
                 src={mv.main}
                 preload='auto'
