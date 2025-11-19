@@ -15,7 +15,7 @@ export default function Navbar({bg, }) {
   //  const ln =1;
   // console.log(ln); 
   
-  const [scroll, setScroll] = useState(true) // add false
+  const [scroll, setScroll] = useState(false)  
   const [isMenuOn, setIsMenuOn] = useState(false);
 
   const handleScroll = () =>{
