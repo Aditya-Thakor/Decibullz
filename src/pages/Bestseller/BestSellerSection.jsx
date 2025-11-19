@@ -20,7 +20,7 @@ export default function BestSellerSection() {
   }, []);
 
   return (
-    <div className="h-screen mt-28 px-10">
+    <div className="h-auto xl:h-screen lg:mt-28 px-10">
       <div className="flex flex-col lg:flex-row lg:justify-between items-start lg:items-center gap-2 h-20">
         <span className=" text-2xl sm:text-4xl font-semibold">BEST SELLERS</span>
         <span 

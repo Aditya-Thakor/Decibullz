@@ -28,6 +28,8 @@ import feature4 from './icons/Secure_Icon_24px.svg';
 import feature5 from './icons/Shape_Icon_24px.svg';
 import blackBg from './bgs/BACKGROUND_GRUNGE_HEX_6.24.png';
 import whiteBg from './bgs/BACKGROUND_HEX_fade_6.24.png';
+import blackBgMobile from './bgs/BACKGROUND_GRUNGE_MOBILE_HEX_6.24.png';
+import whiteBgMobile from './bgs/BACKGROUND_HEX_fade_mobile_6.24.png';
 import pfp1 from './imgs/pfps/Comms-HEX-6.24.png';
 import pfp2 from './imgs/pfps/Hunting-HEX-6.24.png';
 import pfp3 from './imgs/pfps/Music-HEX-6.24.png';
@@ -83,7 +85,9 @@ export default {
   feature4,
   feature5,
   blackBg,
+  blackBgMobile,
   whiteBg,
+  whiteBgMobile,
   pfp1,
   pfp2,
   pfp3,

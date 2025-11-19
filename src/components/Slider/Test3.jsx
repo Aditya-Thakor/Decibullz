@@ -79,7 +79,7 @@ export const SpringMouseFollow = () => {
         opacitySpring.set(0);
         scaleSpring.set(0);
       }}
-      className=" bg-background  h-screen relative hidden md:block "
+      className=" bg-background h-auto xl:h-screen relative hidden md:block "
     >
       <motion.div
         style={{

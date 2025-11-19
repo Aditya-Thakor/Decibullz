@@ -24,15 +24,16 @@ function App() {
       
       
       <Navbar  /> 
+      {/* <Slider /> */}
       <SliderMain/>
-      {/* <BestSellerSection /> */}
-      {/* <Review /> */}
+      <BestSellerSection />
+      <Review />
       <Partners />
       <VideoSection />
       <FeatureSection />
-      {/* <AdsSection />
-      <ArticlesSection />
-      <Footer/> */}
+      {/* <AdsSection /> */}
+      {/* <ArticlesSection /> */}
+      <Footer/>
       
       
       
