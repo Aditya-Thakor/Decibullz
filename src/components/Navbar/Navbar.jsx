@@ -102,7 +102,9 @@ export default function Navbar({bg, }) {
         {/* search */}
         <i 
           className="ri-search-line hidden sm:block hover:text-orange-500"
-          
+          onClick={()=>{
+            navigate('/productfinder')
+          }}
         ></i>
         {/* user */}
         <i 
