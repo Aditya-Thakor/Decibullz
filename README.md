@@ -1,6 +1,6 @@
 # Decibullz Clone — Custom-Molded Earplugs E-Commerce (WIP)
 
-[![React](https://img.shields.io/badge/React-16.8+-blue)](https://reactjs.org/) [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.0+-teal)](https://tailwindcss.com/) [![Node.js](https://img.shields.io/badge/Node.js-14+-green)](https://nodejs.org/) [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-4ea94b)](https://www.mongodb.com/)
+[![React](https://img.shields.io/badge/React-blue)](https://reactjs.org/) [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-teal)](https://tailwindcss.com/) [![Node.js](https://img.shields.io/badge/Node.js-green)](https://nodejs.org/) [![MongoDB](https://img.shields.io/badge/MongoDB-Compass-4ea94b)](https://www.mongodb.com/)
 
 > A work-in-progress full-stack clone of the Decibullz website showcasing custom-molded earplugs and earpieces. Built with **React + Tailwind CSS** on the frontend and **Express + MongoDB** on the backend.
 
