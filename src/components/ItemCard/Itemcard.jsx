@@ -73,7 +73,7 @@ export default function ItemCard({itmImg , title, price,offer, btnWorking,produc
         >
           + Add to Cart
         </button>
-        <button className="  bg-orange-600 hover:bg-orange-500 rounded-none font-bold px-2 py-2  lg:px-4 lg:py-2 flex items-center gap-2  "
+        <button className="  bg-orange-600 hover:bg-orange-500 rounded-none font-bold px-2 py-2  lg:px-4 lg:py-2 flex items-center  gap-2  "
           onClick={()=>{
              btnWorking? alert("buy item now!"): alert('is not working!')
           }}
