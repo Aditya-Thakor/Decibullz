@@ -126,7 +126,7 @@ export default function Navbar({bg, }) {
         </Link>
       </div>
       <div className={` h-screen w-full sm:w-1/2 bg-transparent  lg:hidden absolute left-0 top-0 p-2  transition-transform duration-500 ease-in-out ${isMenuOn? "  translate-x-0   " : " -translate-x-full "}`}>
-             <div className={` h-full w-full flex flex-col gap-10 p-7 bg-white  `}>
+             <div className={` h-full w-full flex flex-col gap-10 p-7 bg-white text-black  `}>
               <div className={`transition-opacity duration-1000  ease-in-out `}>
                 <X 
                   className="size-10 p-2 border border-gray-400 rounded-full "
