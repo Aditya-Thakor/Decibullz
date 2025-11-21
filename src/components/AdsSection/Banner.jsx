@@ -3,7 +3,7 @@ export default function Banner({bg,title,text, textColor , order,btnText,pfp, to
     
     return(
         <div 
-            className='h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center scale-110 lg:gap-20 px-5 lg:px-10'
+            className='h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:gap-20 px-5 lg:px-10'
             style={{
                 backgroundImage:`url(${bg})`, 
                 backgroundPosition:"center",

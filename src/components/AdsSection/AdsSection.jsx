@@ -52,9 +52,9 @@ export default function AdsSection(){
              
         </div>
 
-        <div className="h-screen block lg:hidden" >
+        {/* <div className="h-screen block lg:hidden" > */}
             {/* small screen banners */}
-            <Banner 
+            {/* <Banner 
                 bg={br.blackBgMobile} 
                 title="HUNTING" 
                 text="When peak sound pressure (gunshots & explosions) reach your ear, our moldable custom ear plug shooting filters suppress damaging levels in real-time without the use of batteries. Unlike traditional earplugs, percussive filters allow for full situational awareness." 
@@ -96,9 +96,9 @@ export default function AdsSection(){
                 btnText="Shop Sport Shooting"
                 top="bottom-20"
                 textColor="text-white"
-            />
+            /> */}
              
-        </div>
+        {/* </div> */}
         </>
     )
 }

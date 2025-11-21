@@ -31,8 +31,8 @@ function App() {
       <Partners />
       <VideoSection />
       <FeatureSection />
-      {/* <AdsSection /> */}
-      {/* <ArticlesSection /> */}
+      <AdsSection />
+      <ArticlesSection />
       <Footer/>
       
       
