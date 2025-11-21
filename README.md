@@ -1,12 +1,37 @@
-# React + Vite
+# Decibullz Clone — Custom-Molded Earplugs E-Commerce (WIP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-16.8+-blue)](https://reactjs.org/) [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.0+-teal)](https://tailwindcss.com/) [![Node.js](https://img.shields.io/badge/Node.js-14+-green)](https://nodejs.org/) [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-4ea94b)](https://www.mongodb.com/)
 
-Currently, two official plugins are available:
+> A work-in-progress full-stack clone of the Decibullz website showcasing custom-molded earplugs and earpieces. Built with **React + Tailwind CSS** on the frontend and **Express + MongoDB** on the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Project Status
+**Progress:** ~60–70% complete (WIP)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**What’s complete**
+- Core responsive UI with React components and Tailwind styling
+- Product listing pages and category-based pages.
+- Routing (React Router)
+- Express server with and MongoDB models 
+- order form integration with backend validation
+- Authentication (user accounts) & shopping cart
+- Admin dashboard for product management
+
+**In progress / Planned**
+- Product search refinement
+- Contact form integration with backend validation 
+- Deployment (client + server) and performance optimizations
+- Tests (unit/integration) and accessibility improvements
+
+---
+
+## Tech Stack
+- **Frontend:** React, Tailwind CSS, React Router, Vite, Motion, remix-icons,lucide-react  
+- **Backend:** Node.js, Express.js,Multer, MongoDB
+- **Database:** MongoDB / MongoDB Compass 
+
+---
+
+## Demo 
+
