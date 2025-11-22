@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PageTemp from "../Shop/PageTemp";
 import PdSection from "./PdSection";
+import Footer from "/src/components/Footer/Footer";
 
 export default function Hunting(){
     const [huntingProducts, setHuntingProducts]= useState([]);
@@ -23,6 +24,7 @@ export default function Hunting(){
            <div className="h-auto my-20">
                 <PdSection productData={huntingProducts} />
            </div>
+           <Footer/>
         </div>
     )
 }
