@@ -7,7 +7,7 @@ export default function PageTemp({title}){
     return(
         <div className="h-auto">
             <Nav3/>  
-            <div className="h-screen ">
+            <div className="xl:h-screen mt-30 xl:mt-0 ">
                 <div className= "h-3/5 lg:h-full flex flex-col gap-30 justify-center items-center ">
                     <h1 className="text-xl sm:text-4xl font-bold">{title}</h1>
                     <div className="flex justify-center lg:grid lg:grid-cols-4 gap-0  sm:gap-10 font-normal text-center items-center  sm:px-0 ">
