@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 export default function Signup(){
     const [username,setUsername]=useState('');
@@ -7,15 +8,16 @@ export default function Signup(){
     const [emailStatus, setEmailStatus]=useState(false)
     const [ password, setPassword] = useState('');
     const [passStatus, setPassStatus]= useState(false);
-    const [image,setImage]= useState('');
+    const [image,setImage]= useState(null);
     const [imgStatus, setImgStatus]= useState(false);
     
     const userData = new FormData();
     userData.append('username', username);
     userData.append('email', email);
     userData.append('password', password);
-    userData.append('file', image);
+    userData.append('pfp', image);
 
+    const navigate= useNavigate();
 
     const handleSignup =async()=>{
 
@@ -45,19 +47,16 @@ export default function Signup(){
         console.log(userData);
 
         if(username.length>0 && email.length>0 && password.length>0){
-           await fetch('http://localhost:5000/userinfo',{
+        
+          const createUser= await fetch('http://localhost:5200/decibullz/users/new-user',{
                 method:'post',
                 body:userData
             })
-            .then(res=>res.json())
-            .then((data)=>{
-                return data;
-            })
-            .catch((err)=>{
-                console.log('error at signup ', err);
-                
-            })
-            //ERRORRRR 
+            console.log(await createUser.json());
+            if (createUser.status===200) {
+                navigate('/')
+            }
+           
         }
         else{
             console.log("error");
