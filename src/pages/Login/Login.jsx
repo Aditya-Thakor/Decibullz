@@ -2,8 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import l from '../../assets/images/index';
 import { useEffect, useState } from 'react';
 export default function Login(){
-    const [email, setEmail] = useState();
-    const [password,setPassword]= useState();
+    const [email, setEmail] = useState('');
+    const [password,setPassword]= useState('');
 
     const navigate = useNavigate();
 
@@ -26,22 +26,20 @@ export default function Login(){
         formData1.append("email", email);
         formData1.append("password",password);
         
-        const result = await fetch('http://localhost:5000/userlogin',{
+        const result = await fetch('http://localhost:5200/decibullz/user/login',{
                 method:'post',
                 body:formData1,  
-            }).then(res=>res.json()).then((data)=>{
-                return data;
-            }).catch((err)=>{console.log("error at User Login", err)
             });
-        
+
+            console.log(await result.json());
            
-        if(result.length==0){
-            alert("User didn't matched.. Please Signup first");
-        }
-        else{
-            navigate('/')
-            console.log("Login Success");
-        }
+        // if(result.length==0){
+        //     alert("User didn't matched.. Please Signup first");
+        // }
+        // else{
+        //     navigate('/')
+        //     console.log("Login Success");
+        // }
               
     }
 
@@ -81,7 +79,7 @@ export default function Login(){
                         onChange={(e)=>setEmail(e.target.value)}
                     />
                     <input 
-                        type="password"
+                        type="text"
                         placeholder='password'
                         className='border p-3 rounded-lg'
                         value={password}
