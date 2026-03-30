@@ -41,7 +41,7 @@ export default function Bestseller(){
     return(
        <div className="h-screen relative flex flex-col px-10">
             <div className="absolute left-0">
-                <Navbar/>
+                {/* <Navbar/> */}
             </div>
             <div className="flex items-center justify-between h-20">
                 <span className="text-4xl font-semibold">BEST SELLERS</span>

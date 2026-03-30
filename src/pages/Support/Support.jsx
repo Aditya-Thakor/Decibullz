@@ -23,7 +23,7 @@ export default function Support() {
   ];
   return (
     <div className="h-auto">
-      <Nav3 />
+      {/* <Nav3 /> */}
       <div className="h-screen mt-40">
         <div className="h-full flex flex-col gap-20 items-center justify-center">
           <div className="flex gap-30">

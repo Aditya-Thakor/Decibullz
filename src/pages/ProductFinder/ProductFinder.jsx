@@ -11,7 +11,7 @@ export default function ProductFinder() {
 
   return (
     <div className="h-auto  ">
-      <Nav3 />
+      {/* <Nav3 /> */}
       <div className="h-auto md:h-screen w-full mt-30 mb-10 lg:mt-40">
         <div className="h-auto md:h-3/4 lg:h-full w-full flex flex-col gap-7 justify-center items-center ">
           <h1 className=" text-4xl sm:text-3xl text-wrap text-center font-bold">
