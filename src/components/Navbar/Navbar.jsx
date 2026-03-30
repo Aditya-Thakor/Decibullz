@@ -34,6 +34,26 @@ export default function Navbar({bg, }) {
     }
   },[])
 //add && bg in scroll ternary
+
+const links= [
+  {
+    to:'/shop',
+    name: "SHOP"
+  },
+  {
+    to:'/productfinder',
+    name:"PRODUCT FINDER"
+  },
+  {
+    to:'/bestseller',
+    name:"BEST SELLERS"
+  },
+  {
+    to:'/support',
+    name:"SUPPORT"
+  },
+]
+
   return (
     <div
       className={` h-28 z-50 fixed top-0 w-screen text-slate-950 px-5 sm:px-10 flex items-center justify-between 
@@ -62,41 +82,19 @@ export default function Navbar({bg, }) {
         />
       </div>
       <div className="hidden lg:flex gap-6">
-        <NavLink
-          className="font-bold  text-md hover:text-orange-500"
-          to="/shop"
-        >
-          SHOP
-        </NavLink>
-
-        <NavLink to='/productfinder' className="font-bold text-md hover:text-orange-500">
-          PRODUCT FINDER
-        </NavLink>
-
-        <NavLink
-          className="font-bold  text-md hover:text-orange-500"
-          to="/bestseller"
-        >
-          BEST SELLERS
-        </NavLink>
         
-        <NavLink to='/support' className="font-bold  text-md hover:text-orange-500">
-          SUPPORT
-        </NavLink>
-        {/* <NavLink
-          to="/uploadItem/uploadItemForm"
-          className="font-semibold text-slate-700 text-md"
-          target="_blank"
-        >
-          UploadItem
-        </NavLink> */}
-        {/* <NavLink
-          to="/admin/admindashboard"
-          className="font-semibold text-slate-700 text-md"
-          target="_blank"
-        >
-          Admin
-        </NavLink> */}
+        {links.map((l,ind)=>(
+          <NavLink 
+            key={ind} 
+            to={`/dz${l.to}`} 
+            end
+            className={({ isActive }) =>
+            `${isActive ? "text-orange-500" : "text-black"} font-bold text-md hover:text-orange-500`
+        }>
+            {l.name}
+          </NavLink>
+        ))}
+
       </div>
       <div className="flex gap-4  text-xl ">
         {/* search */}
