@@ -24,32 +24,37 @@ import Events from "/src/pages/ProductFinder/Events";
 import Radio from "/src/pages/ProductFinder/Radio";
 import Sports from "/src/pages/ProductFinder/Sports";
 import Sleep from "/src/pages/ProductFinder/Sleep";
+import Layout from "../pages/Layout";
 
 export default function AppRoutes(){
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<App/>} ></Route>
+                    <Route path="/" element={<App/>}/>
+                <Route path="/dz" element={<Layout/>} >
+                    <Route path="/dz/shop" element={<Shop/>}></Route>
+                    <Route path="/dz/productfinder" element={<ProductFinder/>}/>
+                    <Route path="/dz/bestseller" element={<BestSellerMain/>}/>
+                    <Route path="/dz/support" element={<Support/>}/>
+                </Route>
+
                 <Route path="/adminlogin" element={<AdminLogin/>} ></Route>
+                <Route path="/admin" element={<Admin/>}>
+                    <Route path="/admin/uploadproduct" element={<ItemUploaderForm/>}></Route>
+                    <Route path="/admin/uploadreview" element={<ReviewUploaderForm/>}></Route>
+                    <Route path="/admin/admindashboard" element={<AdminDashboard/>} ></Route>
+                </Route>
+                <Route path="/uploadItem/uploadItemForm" element={<ItemUploaderForm/>}></Route>
                 <Route path="/login" element={<Login/>}></Route>
                 <Route path="/signup" element={<Signup/>} ></Route>
-                <Route path="/shop" element={<Shop/>}></Route>
-                <Route path="/productfinder" element={<ProductFinder/>}>
-                </Route>
+
                 <Route path="/productfinder/hunting" element={<Hunting/>}></Route>
                 <Route path="/productfinder/industrial" element={<Industrial/>}></Route>
                 <Route path="/productfinder/events" element={<Events/>}></Route>
                 <Route path="/productfinder/radio" element={<Radio/>}></Route>
                 <Route path="/productfinder/sports" element={<Sports/>}></Route>
                 <Route path="/productfinder/sleep" element={<Sleep/>}></Route>
-                <Route path="/bestseller" element={<BestSellerMain/>}></Route>
-                <Route path="/support" element={<Support/>}></Route>
-                <Route path="/uploadItem/uploadItemForm" element={<ItemUploaderForm/>}></Route>
-                <Route path="/admin" element={<Admin/>}>
-                    <Route path="/admin/uploadproduct" element={<ItemUploaderForm/>}></Route>
-                    <Route path="/admin/uploadreview" element={<ReviewUploaderForm/>}></Route>
-                    <Route path="/admin/admindashboard" element={<AdminDashboard/>} ></Route>
-                </Route>
+                
                 <Route path="/cart" element={<Cart/>} ></Route>
                 <Route path="/test" element={<Test2/>}></Route>
                 <Route path="/nav" element={<Navbar/>}></Route>
