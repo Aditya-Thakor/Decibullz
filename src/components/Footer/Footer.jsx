@@ -3,6 +3,28 @@ const ind =
   "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg";
 
 export default function Footer() {
+
+  const shop=[
+    "Sleep", "Music, Events & Concerts", "Shooting","Hunting","Radio & Communication","DIY","Industrial"
+  ];
+
+  const support =[
+    "How Decibullz Work", "Product Warnings","FAQ","Contact","Replacement Parts","Military Discounts","Police Discounts","Fire & EMS Discounts","Warranty"
+  ];
+
+  const decibullz = [
+    "Reviews","Blog","Wholesale & Retail","Decibullz for Teams","Privacy Policy","Terms & Conditions","Accessibility Statement","Cookies Declaration","Do Not Sell My Info","Data Requests"
+  ];
+
+  const socialMedia = [
+      <i className="ri-facebook-fill"></i>,
+      <i className="ri-twitter-x-line "></i>,
+      <i className="ri-instagram-line"></i>,
+      <i className="ri-threads-line"></i>,
+      <i className="ri-youtube-fill"></i>,
+      <i className="ri-linkedin-fill"></i>
+  ]
+
   return (
     <div className="sm:h-auto xl:h-screen flex flex-col sm:gap-20 bg-black text-white px-5 py-10 sm:px-12 sm:py-14">
       <div className=" h-3/4  grid gap-10 sm:gap-10 lg:gap-10 grid-cols-12">
@@ -24,74 +46,27 @@ export default function Footer() {
           <div className="col-span-6 sm:col-span-4 flex flex-col gap-5 ">
             <h4 className="font-bold text-lg">SHOP</h4>
             <ul className=" flex flex-col gap-3 text-md font-semibold text-white/70">
-              <li className=" cursor-pointer hover:text-white">Sleep</li>
-              <li className=" cursor-pointer hover:text-white">
-                Music, Events & Concerts
-              </li>
-              <li className=" cursor-pointer hover:text-white">Shooting</li>
-              <li className=" cursor-pointer hover:text-white">Hunting</li>
-              <li className=" cursor-pointer hover:text-white">
-                Radio & Communication
-              </li>
-              <li className=" cursor-pointer hover:text-white">DIY</li>
-              <li className=" cursor-pointer hover:text-white">Industrial</li>
+            {shop.map((shop,ind)=>(
+              <li key={ind}  className=" cursor-pointer hover:text-white">{shop}</li>
+            ))}
             </ul>
           </div>
           <div className=" col-span-6 sm:col-span-4 flex flex-col gap-5 ">
             <h4 className="font-bold text-lg">SUPPORT</h4>
             <ul className=" flex flex-col gap-3 text-md font-semibold text-white/70">
-              <li className=" cursor-pointer hover:text-white">
-                How Decibullz Work
+              {support.map((s,ind)=>(
+                <li key={ind} className=" cursor-pointer hover:text-white">
+                {s}
               </li>
-              <li className=" cursor-pointer hover:text-white">
-                Product Warnings
-              </li>
-              <li className=" cursor-pointer hover:text-white">FAQ</li>
-              <li className=" cursor-pointer hover:text-white">Contact</li>
-              <li className=" cursor-pointer hover:text-white">
-                Replacement Parts
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Military Discounts
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Police Discounts
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Fire & EMS Discounts
-              </li>
-              <li className=" cursor-pointer hover:text-white">Warranty</li>
+              ))}
             </ul>
           </div>
           <div className="col-span-6 sm:col-span-4 flex flex-col gap-5 ">
             <h4 className="font-bold text-lg">DECIBULLZ</h4>
             <ul className=" flex flex-col gap-3 text-md font-semibold text-white/70">
-              <li className=" cursor-pointer hover:text-white">Reviews</li>
-              <li className=" cursor-pointer hover:text-white">Blog</li>
-              <li className=" cursor-pointer hover:text-white">
-                Wholesale & Retail
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Decibullz for Teams
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Privacy Policy
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Terms & Conditions
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Accessibility Statement
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Cookies Declaration
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Do Not Sell My Info
-              </li>
-              <li className=" cursor-pointer hover:text-white">
-                Data Requests
-              </li>
+              {decibullz.map((dz,ind)=>(
+                <li key={ind} className=" cursor-pointer hover:text-white">{dz}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -101,12 +76,9 @@ export default function Footer() {
       <div className="h-1/4 sm:h-1/6 grid gap-5 sm:gap-0  grid-cols-12 pt-7 sm:pt-0">
         <div className=" col-span-10 sm:col-span-6 flex flex-col lg:gap-7 justify-between ">
           <div className="flex gap-8 text-3xl ">
-            <i className="ri-facebook-fill"></i>
-            <i className="ri-twitter-x-line "></i>
-            <i className="ri-instagram-line"></i>
-            <i className="ri-threads-line"></i>
-            <i className="ri-youtube-fill"></i>
-            <i className="ri-linkedin-fill"></i>
+           {socialMedia.map((icon,ind)=>(
+             <span key={ind}>{icon}</span>
+           ))}
           </div>
 
           <div className="text-sm hidden sm:block text-white/50">
