@@ -65,6 +65,8 @@ export default function AdsSection() {
                     pfp={bnr.pfp}
                     btnText={bnr.btnText}
                     textColor={bnr.textColor}
+                    order={bnr.order}
+                    top={bnr.top}
                 />
                 ))}
 
