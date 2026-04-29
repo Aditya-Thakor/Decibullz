@@ -8,6 +8,8 @@ import Support from "/src/pages/Support/Support";
 import {BrowserRouter as  Router, Routes,Route } from "react-router-dom";
 import ReviewUploaderForm from "/src/pages/ReviewUploader/ReviewUploaderForm";
 import AdminDashboard from "/src/pages/Admin/AdminDashboard";
+import ManageReviews from "/src/pages/Admin/ManageReviews";
+import ProductDetail from "/src/pages/ProductDetail/ProductDetail";
 import Test3 from "/src/components/Slider/Test3";
 import Test2 from "/src/components/Slider/Test2";
 import Cart from "/src/pages/Cart/Cart";
@@ -36,12 +38,14 @@ export default function AppRoutes(){
                     <Route path="/dz/productfinder" element={<ProductFinder/>}/>
                     <Route path="/dz/bestseller" element={<BestSellerMain/>}/>
                     <Route path="/dz/support" element={<Support/>}/>
+                    <Route path="/dz/product/:id" element={<ProductDetail/>}/>
                 </Route>
 
                 <Route path="/adminlogin" element={<AdminLogin/>} ></Route>
                 <Route path="/admin" element={<Admin/>}>
                     <Route path="/admin/uploadproduct" element={<ItemUploaderForm/>}></Route>
                     <Route path="/admin/uploadreview" element={<ReviewUploaderForm/>}></Route>
+                    <Route path="/admin/managereviews" element={<ManageReviews/>}></Route>
                     <Route path="/admin/admindashboard" element={<AdminDashboard/>} ></Route>
                 </Route>
                 <Route path="/uploadItem/uploadItemForm" element={<ItemUploaderForm/>}></Route>
