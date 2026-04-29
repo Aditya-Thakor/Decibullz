@@ -1,87 +1,81 @@
-// import { CartContext } from "../../Contexts/CartContext";
 import CartContext from "/src/Contexts/CartContext";
 import { useContext } from "react";
-import { React } from "react";
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function ItemCard({itmImg , title, price,offer, btnWorking,product}) {
-//
-  const [products,setProducts] = useState([]);
-  // const [carted,setCarted] = useState([]);
-  //const [cart,setCart]=useState(0);
-  //const {cart,addToCart} = React.useContext(require("../../Contexts/CartContext").de);
-  const {addToCart} = useContext(CartContext)
-  // useEffect(()=>{
-  //   fetch('http://localhost:5000/productdata')
-  //   .then((res)=>res.json())
-  //   .then((data)=>{
-  //     setProducts(data)
-  //   })
-  //   .catch((error)=>console.log('error at cartting',error)
-  //   )
-  // },{products})
+export default function ItemCard({ itmImg, title, price, offer, btnWorking, product }) {
+  const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
-  // console.log(cart? console.log(cart): 'empty cart' );
-  
-
-  // HANDLE CART 🛒
-  // const handleCart = () =>{
-  //  var crt = localStorage.getItem("cartItem");
-  //  console.log(crt);
-  //  if(crt==null)
-  //  {
-  //   setCart(1);
-  //   localStorage.setItem("cartItem",cart)
-  //  }
-  //  else{
-  //   setCart(cart+1);
-  //   localStorage.setItem("cartItem",cart);
-  //   //alert(crt.length);
-  //  }
-   
-  //}
-  // const testCart = (p) => {
-  //   console.log(p)
-  // }
+  const handleCardClick = () => {
+    // Navigate using product id
+    const productId = product?._id || product?.id;
+    if (productId) {
+      navigate(`/dz/product/${productId}`);
+    }
+  };
 
   return (
-    // remover width of below div (w-1/4)
-    <div className="h-full w-full border-0 drop-shadow-lg rounded-lg overflow-hidden bg-white m-1">
-      <div className=" w-full px-4 md:p-4">
-        <div className="h-30 sm:h-40 w-full flex justify-center">
-          <img src={itmImg} alt="p1" className="w-full h-full object-contain" />
-        </div>
-        <div className="mt-3 font-bold text-xs sm:text-xl">{title}</div>
-        <div className="text-gray-700 text-base">
-          {/* ${price} */}
-          {offer==0? 
-           <span className=" text-sm sm:text-xl">${price}</span>
-          :
-          <div className="flex items-center gap-2">
-            <span className="line-through text-sm sm:text-xl">${price} </span>
-            <span className="font-semibold text-sm sm:text-xl"> ${offer} </span>
-            </div>
-          
-          }
-        </div>
+    <div className="group relative flex flex-col h-full w-full bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden m-1">
+      
+      {/* Image Container */}
+      <div 
+        className="relative h-48 sm:h-56 w-full p-4 flex items-center justify-center bg-gray-50/50 cursor-pointer"
+        onClick={handleCardClick}
+      >
+        <img 
+          src={itmImg} 
+          alt={title} 
+          className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" 
+        />
+        {/* Sale Badge */}
+        {(offer > 0 && offer != "0") && (
+          <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm tracking-wider">
+            SALE
+          </div>
+        )}
       </div>
 
-      <div className="flex flex-col sm:justify-between sm:flex-row gap-1 sm:gap-5 p-4 text-white text-center bg-transparent  ">
-        <button
-          className="bg-gray-900  rounded-none font-semibold px-1 py-1 sm:px-4 sm:py-2 hover:bg-gray-700"
-          onClick={()=>addToCart(product)}
+      {/* Content Container */}
+      <div className="flex flex-col flex-grow p-5">
+        <h3 
+          className="font-bold text-gray-900 text-sm sm:text-lg mb-2 line-clamp-2 leading-tight group-hover:text-orange-600 transition-colors cursor-pointer"
+          onClick={handleCardClick}
         >
-          + Add to Cart
-        </button>
-        <button className="  bg-orange-600 hover:bg-orange-500 rounded-none font-bold px-2 py-2  lg:px-4 lg:py-2 flex items-center  gap-2  "
-          onClick={()=>{
-             btnWorking? alert("buy item now!"): alert('is not working!')
-          }}
-        >
-          <i className="ri-shopping-cart-line text-sm sm:text-2xl"></i> Buy Now!
-        </button>
-      </div>
+          {title}
+        </h3>
+        
+        <div className="mt-auto pt-3">
+          {/* Price Section */}
+          <div className="flex items-end gap-2 mb-4">
+            {offer == 0 || !offer ? (
+              <span className="font-extrabold text-gray-900 text-xl sm:text-2xl">${price}</span>
+            ) : (
+              <>
+                <span className="font-extrabold text-orange-600 text-xl sm:text-2xl">${offer}</span>
+                <span className="line-through text-gray-400 text-sm sm:text-base font-medium mb-1">${price}</span>
+              </>
+            )}
+          </div>
 
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-2">
+            <button
+              onClick={() => addToCart(product)}
+              className="flex-1 bg-white border-2 border-gray-900 hover:bg-gray-900 hover:text-white text-gray-900 font-bold py-2 sm:py-2.5 rounded-xl transition-colors text-xs sm:text-sm flex justify-center items-center gap-1 shadow-sm"
+            >
+              <i className="ri-shopping-cart-2-line text-lg"></i> Add
+            </button>
+            <button
+              onClick={() => {
+                btnWorking ? alert("Redirecting to checkout...") : alert("Button not working currently.");
+              }}
+              className="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 sm:py-2.5 rounded-xl transition-colors text-xs sm:text-sm flex justify-center items-center gap-1 shadow-md shadow-orange-500/30"
+            >
+              <i className="ri-flashlight-fill text-lg"></i> Buy
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
