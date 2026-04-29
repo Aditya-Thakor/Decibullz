@@ -40,10 +40,11 @@ const CartProvider = ({children}) =>{
     const getTotal = () => {
         let total=0;
         for(let i= 0; i < cartdata.length; i++){
-        let price =Number(cartdata[i].productPrice*cartdata[i].qty) 
-        total= Math.floor((price+total)*100)/100
+            let activePrice = (cartdata[i].offer > 0 && cartdata[i].offer != "0") ? Number(cartdata[i].offer) : Number(cartdata[i].productPrice);
+            let price = activePrice * cartdata[i].qty;
+            total= Math.floor((price+total)*100)/100;
         }
-        return total
+        return total;
     }
 
     return(
