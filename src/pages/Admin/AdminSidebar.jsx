@@ -55,6 +55,14 @@ export default function AdminSidebar() {
           <i className="ri-star-smile-line text-xl"></i>
           <span>Upload Review</span>
         </NavLink>
+
+        <NavLink
+          to="/admin/managereviews"
+          className={({ isActive }) => (isActive ? activeLinkClass : inactiveLinkClass)}
+        >
+          <i className="ri-chat-check-line text-xl"></i>
+          <span>Manage Reviews</span>
+        </NavLink>
       </div>
 
       {/* Bottom Section (e.g., Profile or Settings) can go here in the future */}
