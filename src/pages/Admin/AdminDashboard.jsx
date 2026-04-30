@@ -52,6 +52,8 @@ export default function AdminDashboard() {
     fetchDashboardData();
   }, []);
 
+  const ptHeadings=["Product Name","Category","Price","Date Added","Actions"]
+
   return (
     <div className="p-8 h-full overflow-y-auto">
       <div className="flex justify-between items-center mb-8">
@@ -130,11 +132,9 @@ export default function AdminDashboard() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-white/40 border-b border-white/50">
-                <th className="px-6 py-4 text-xs font-bold text-gray-700 uppercase tracking-wider">Product Name</th>
-                <th className="px-6 py-4 text-xs font-bold text-gray-700 uppercase tracking-wider">Category</th>
-                <th className="px-6 py-4 text-xs font-bold text-gray-700 uppercase tracking-wider">Price</th>
-                <th className="px-6 py-4 text-xs font-bold text-gray-700 uppercase tracking-wider">Date Added</th>
-                <th className="px-6 py-4 text-xs font-bold text-gray-700 uppercase tracking-wider text-right">Actions</th>
+                {ptHeadings.map((th,ind)=>(
+                  <th className="px-6 py-4 text-xs font-bold text-gray-700 uppercase tracking-wider" key={ind} >{th}</th>
+                ))}               
               </tr>
             </thead>
             <tbody className="divide-y divide-white/30">
