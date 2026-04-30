@@ -52,6 +52,33 @@ export default function AdminDashboard() {
     fetchDashboardData();
   }, []);
 
+  const statsCards = [
+    {
+      colors:"bg-orange-100 text-orange-500",
+      icon: <i className="ri-shopping-bag-3-fill"/>,
+      title:"Total Products",
+      stats:isLoading ? "..." : stats.totalProducts
+    },
+    {
+      colors:"bg-blue-100 text-blue-500",
+      icon:  <i className="ri-star-smile-fill"/>,
+      title:"Total Reviews",
+      stats:isLoading ? "..." : stats.pendingReviews
+    },
+    {
+      colors:"bg-green-100 text-green-500",
+      icon:  <i className="ri-shopping-cart-fill"></i>,
+      title:"Total Orders",
+      stats:isLoading ? "..." : stats.totalOrders
+    },
+    {
+      colors:" bg-purple-100 text-purple-500 ",
+      icon:  <i className="ri-wallet-3-fill"></i>,
+      title:"Total Revenue",
+      stats:isLoading ? "..." : stats.revenue
+    },
+  ]
+
   const ptHeadings=["Product Name","Category","Price","Date Added","Actions"]
 
   return (
@@ -70,49 +97,19 @@ export default function AdminDashboard() {
 
       {/* Stat Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white/60 backdrop-blur-md p-6 rounded-xl shadow-sm border border-white/50 flex items-center gap-4 hover:shadow-md transition-shadow">
-          <div className="h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 text-2xl">
-            <i className="ri-shopping-bag-3-fill"></i>
+       {statsCards.map((stat,ind)=>(
+         <div className="bg-white/60 backdrop-blur-md p-6 rounded-xl shadow-sm border border-white/50 flex items-center gap-4 hover:shadow-md transition-shadow">
+          <div className={`h-12 w-12 ${stat?.colors} rounded-full  flex items-center justify-center text-2xl `}>
+            {stat.icon}
           </div>
           <div>
-            <p className="text-sm text-gray-500 font-medium">Total Products</p>
+            <p className="text-sm text-gray-500 font-medium">{stat.title}</p>
             <h3 className="text-2xl font-bold text-gray-900">
-              {isLoading ? "..." : stats.totalProducts}
+              {stat.stats}
             </h3>
           </div>
-        </div>
-
-        <div className="bg-white/60 backdrop-blur-md p-6 rounded-xl shadow-sm border border-white/50 flex items-center gap-4 hover:shadow-md transition-shadow">
-          <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 text-2xl">
-            <i className="ri-star-smile-fill"></i>
-          </div>
-          <div>
-            <p className="text-sm text-gray-500 font-medium">Total Reviews</p>
-            <h3 className="text-2xl font-bold text-gray-900">
-              {isLoading ? "..." : stats.pendingReviews}
-            </h3>
-          </div>
-        </div>
-
-        <div className="bg-white/60 backdrop-blur-md p-6 rounded-xl shadow-sm border border-white/50 flex items-center gap-4 hover:shadow-md transition-shadow">
-          <div className="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-2xl">
-            <i className="ri-shopping-cart-fill"></i>
-          </div>
-          <div>
-            <p className="text-sm text-gray-500 font-medium">Total Orders</p>
-            <h3 className="text-2xl font-bold text-gray-900">{stats.totalOrders}</h3>
-          </div>
-        </div>
-
-        <div className="bg-white/60 backdrop-blur-md p-6 rounded-xl shadow-sm border border-white/50 flex items-center gap-4 hover:shadow-md transition-shadow">
-          <div className="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-500 text-2xl">
-            <i className="ri-wallet-3-fill"></i>
-          </div>
-          <div>
-            <p className="text-sm text-gray-500 font-medium">Total Revenue</p>
-            <h3 className="text-2xl font-bold text-gray-900">{stats.revenue}</h3>
-          </div>
-        </div>
+         </div>
+       ))}        
       </div>
 
       {/* Products Table */}
